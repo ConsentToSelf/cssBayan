@@ -95,17 +95,16 @@ label {
 .accordion__item:active .icon line {
   stroke: rgb(255, 0, 183);
 }
+.accordion__item:hover .accordion__content,
+.accordion__item-input:checked ~ .accordion__content {
+  height: 100%;
+  visibility: visible;
+  animation: myAnim 1s ease 0s 1 normal forwards;
+}
 @media (hover: hover) {
   .accordion:hover .accordion__item .accordion__item-title .icon {
     opacity: 1;
     transition: 0.5s ease-in-out;
-  }
-
-  .accordion__item:hover .accordion__content,
-  .accordion__item-input:checked ~ .accordion__content {
-    height: 100%;
-    visibility: visible;
-    animation: myAnim 1s ease 0s 1 normal forwards;
   }
 
   .accordion__item-input:hover ~ .accordion__item-title .icon {
