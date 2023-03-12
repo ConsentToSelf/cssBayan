@@ -20,9 +20,49 @@ body {
   max-width: 32.25rem;
   margin: 0 auto;
 }
-
 .accordion__item {
   padding-bottom: 0.5rem;
   border-bottom: 0.06rem solid black;
   margin-top: 1.35rem;
+}
+.icon {
+  opacity: 1;
+  margin-left: auto;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: transform 0.5s ease-in-out;
+  cursor: pointer;
+}
+.accordion__item-input:checked ~ .accordion__item-img {
+  visibility: visible;
+  height: 100%;
+  animation: myAnim 1s ease 0s 1 normal forwards;
+}
+.accordion__item-input:checked ~ .accordion__item-title .icon {
+  transform: rotate(45deg);
+}
+.accordion__item-input:not(:checked) ~ .accordion__item-title .icon {
+  transform: rotate(0);
+}
+.accordion__item-img {
+  width: 100%;
+  height: 0;
+  visibility: hidden;
+  cursor: pointer;
+}
+.accordion__title {
+  cursor: pointer;
+  font-size: 50px;
+}
+
+.accordion__item-title {
+  display: flex;
+  align-items: center;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.accordion__item-input {
+  visibility: hidden;
+  height: 0;
 }
