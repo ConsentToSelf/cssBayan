@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 400;
+}
+body {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 0%,
+    rgba(0, 212, 255, 1) 53%,
+    rgba(8, 137, 14, 1) 91%
+  );
+  color: #000000;
+}
+.accordion {
+  padding-top: 3.75rem;
+  max-width: 32.25rem;
+  margin: 0 auto;
+}
+
+.accordion__item {
+  padding-bottom: 0.5rem;
+  border-bottom: 0.06rem solid black;
+  margin-top: 1.35rem;
+}
