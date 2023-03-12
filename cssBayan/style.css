@@ -100,10 +100,6 @@ body {
     animation: myAnim 1s ease 0s 1 normal forwards;
   }
 
-  .accordion__item-input:checked ~ .accordion__item-img,
-  .accordion__item-input:hover ~ .accordion__item-img {
-    visibility: visible;
-  }
   .accordion__item-input:hover ~ .accordion__item-title .icon {
     transform: rotate(45deg);
   }
