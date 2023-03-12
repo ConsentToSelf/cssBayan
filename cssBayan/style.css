@@ -92,6 +92,9 @@ label {
 .accordion__item:active .accordion__item-title {
   color: rgb(255, 0, 0);
 }
+.accordion__item:active .icon line {
+  stroke: rgb(255, 0, 183);
+}
 @media (hover: hover) {
   .accordion:hover .accordion__item .accordion__item-title .icon {
     opacity: 1;
