@@ -50,11 +50,13 @@ body {
 
 .accordion__item-img {
   width: 100%;
-  height: 0;
-  visibility: hidden;
+  height: 100%;
   cursor: pointer;
 }
-
+.accordion__content {
+  height: 0;
+  visibility: hidden;
+}
 .accordion__title {
   cursor: pointer;
   font-size: 50px;
@@ -91,10 +93,16 @@ body {
     opacity: 1;
     transition: 0.5s ease-in-out;
   }
+  .accordion__item:hover .accordion__content,
+  .accordion__item-input:checked ~ .accordion__content {
+    height: 100%;
+    visibility: visible;
+    animation: myAnim 1s ease 0s 1 normal forwards;
+  }
+
+  .accordion__item-input:checked ~ .accordion__item-img,
   .accordion__item-input:hover ~ .accordion__item-img {
     visibility: visible;
-    height: 100%;
-    animation: myAnim 1s ease 0s 1 normal forwards;
   }
   .accordion__item-input:hover ~ .accordion__item-title .icon {
     transform: rotate(45deg);
